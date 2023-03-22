@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+  </head>
+
+  <body>
+    <label for="value">Enter the value of the table</label>
+    <input
+      type="number"
+      id="input1"
+      name="value"
+      placeholder="Enter the value here "
+    />
+
+    <label for="valu">Enter the lenght of the tabler</label>
+    <input
+      type="number"
+      id="input2"
+      name="valu"
+      placeholder="Enter the value here "
+    />
+    <button onclick="table()">submit</button>
+    <h3 id="result"></h3>
+    <script>
+      async function table() {
+        let n = document.getElementById('input1').value
+        let i = document.getElementById('input2').value
+        /* this one hw ? */
+        // let res = " ";
+
+        let k = 0
+        while (k <= i) {
+          /*and this one */
+          document.getElementById('result').innerHTML +=
+            n + ' ' + '*' + ' ' + k + ' ' + '=' +  "  "
+            +n * k + '<br>'
+          k++
+          await sleep(1000);      
+        }
+        // = res;
+      }
+
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms))
+        // console.log(ms);
+      }
+    </script>
+  </body>
+</html>
